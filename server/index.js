@@ -44,6 +44,14 @@ app.delete('/delete-goal/:id', (req, res) => {
     res.status(200).send({ message: 'Goal deleted successfully' });
 });
 
+app.post('/submit-buddy', (req, res) => {
+    const { buddy, deadline } = req.body;
+
+    if (!buddy || !deadline) {
+        return res.status(400).send({ error: 'Missing buddy' });
+    }
+    res.status(200).send({ message: 'Buddy submitted successfully' });
+});
 
 
 app.listen(4000, () => console.log("Server running on 4000"));
