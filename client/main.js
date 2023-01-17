@@ -22,3 +22,10 @@ const getFortune = () => {
 
 fortuneBtn.addEventListener('click', getFortune)
 
+function submitProgress() {
+    let goal = document.getElementById("goal-select").value;
+    let progress = document.getElementById("progress-input").value;
+    let date = new Date().slice(0,10); 
+}
+
+

@@ -17,4 +17,18 @@
     <script src="main.js"></script>
     
   </body>
+  <form id="goal-form">
+    <label for="goal-select">Select Goal:</label>
+    <select id="goal-select" name="goal">
+      <option value="learn-programming">Learn a new programming language</option>
+      <option value="lose-weight">Lose 20 pounds</option>
+      <option value="read-books">Read 12 books</option>
+    </select>
+    <label for="progress-input">Progress Update:</label>
+    <input type="text" id="progress-input" name="progress">
+    <input type="button" value="Submit Progress" onclick="submitProgress()">
+  </form>
+  
+  
+  
 </html>
