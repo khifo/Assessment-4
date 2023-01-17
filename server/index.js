@@ -15,6 +15,10 @@ const { getFortune } = require('./controller')
 
 app.get("/api/fortune", getFortune);
 
+const { getQuote } = require('./controller')
+
+app.get("/api/quote", getQuote);
+
 app.post('/submit-goal', (req, res) => {
     const { goal, deadline } = req.body;
 

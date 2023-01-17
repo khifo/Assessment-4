@@ -28,4 +28,16 @@ function submitProgress() {
     let date = new Date().slice(0,10); 
 }
 
+const quoteBtn = document.getElementById("quoteButton")
+
+const getQuote = () => {
+    axios.get("http://localhost:4000/api/quote/")
+        .then(res => {
+            const data = res.data;
+            alert(data);
+    });
+};
+
+quoteBtn.addEventListener('click', getQuote)
+
 

@@ -21,3 +21,15 @@ module.exports = {
         res.status(200).send(randomFortune);
     }
 }
+
+module.exports = {
+    getQuote: (req, res) => {
+        const quote  = ["The people who are crazy enough to think they can change the world are the ones who do.", "I never dreamed about success. I worked for it.", "A person who never made a mistake never tried anything new."];
+      
+        // choose random compliment
+        let randomIndex = Math.floor(Math.random() * quote.length);
+        let randomQuote = quote[randomIndex];
+      
+        res.status(200).send(randomQuote);
+    }
+}
